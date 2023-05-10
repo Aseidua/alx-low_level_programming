@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_prime_number - Makes it right to evaluate or prime numbers
+ * check_prime - Makes it right to evaluate or prime numbers
  * @u: integer value
  * @b: number that iterates from 1 to n
  *
