@@ -1,6 +1,6 @@
 #include <stdio.h>
-#ifndef __FILE__max
-#define __FILE__max
+#ifndef __FILE__
+#define __FILE__
 #endif
 
 /**
@@ -10,6 +10,6 @@
 
 int main(void)
 {
-	printf("%s\n", __FILE__max);
+	printf("%s\n", __FILE__\n);
 	return (0);
 }
