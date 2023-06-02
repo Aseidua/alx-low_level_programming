@@ -1,20 +1,23 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * listint_len - Returns the number of elements in a function linked list.
- * @h: Pointer to the list.
+ * list_len - function that prints all the elements of a list_t list
+ * @h: pointer to the struct list_t
  *
- * Return: success nodes.
+ * Return: size_t
  */
-size_t listint_len(const listint_t *h)
+
+size_t list_len(const list_t *h)
 {
-	size_t count = 0;
+	size_t count;
 
-	while (h != NULL)
+	for (count = 0; h != NULL; count++)
 	{
-		h = h->next;
-		count++;
+		h = (*h).next;
 	}
-
 	return (count);
 }
+
