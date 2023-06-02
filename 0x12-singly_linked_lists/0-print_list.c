@@ -1,23 +1,28 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * print_listint - prints all the elements of a list list.
- * @h: pointer to the head of the list.
+ * print_list - function that prints all the elements of a list_t list
+ * @h: pointer to the struct list_t
  *
- * Return: count
+ * Return: size_t
  */
 
-size_t print_listint(const listint_t *h)
+size_t print_list(const list_t *h)
 {
-	size_t count = 0;
+	size_t count;
 
-	while (h != NULL)
+
+	for (count = 0; h != NULL; count++)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		count++;
+		if ((*h).str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%i] %s\n", (*h).len, (*h).str);
+		h = (*h).next;
 	}
-
 	return (count);
 }
+
