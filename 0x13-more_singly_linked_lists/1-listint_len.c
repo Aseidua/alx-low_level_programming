@@ -1,18 +1,17 @@
 #include "lists.h"
 
 /**
- * listint_len - return number of element in a linked listint_t.
+ * listint_len - return the number of elements in a linked listint_t.
  * @h: Pointer to list
  *
- * Return: Success.
+ * Return: succes value
  */
 size_t listint_len(const listint_t *h)
 {
-	size_t count;
+	size_t count = 0;
 
-	while (count == 0 && h != NULL)
+	while (h != NULL)
 	{
-		printf("%d\n", h->n);
 		h = h->next;
 		count++;
 	}
