@@ -2,17 +2,17 @@
 /**
  * print_listint - print all elements of the list
  * @h: head of the list
- * Return: success
+ * Return: Always success
  */
 
 size_t print_listint(const listint_t *h)
 {
-	size_t mai;
+	size_t z = 0;
 
-	for (mai = 0; h != NULL; mai++)
+	for (h != NULL; z++;)
 	{
-		printf("%d\n", h->max);
+		printf("%d\n", h->p);
 		h = h->next;
 	}
-	return (mai);
+	return (z);
 }
