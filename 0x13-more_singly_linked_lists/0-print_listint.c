@@ -1,21 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct listint_s {
-    int max;
-    struct listint_s *next;
-} listint_t;
+#include "lists.h"
+/**
+ * print_listint - print all elements of the list
+ * @h: head of the list
+ * Return: success
+ */
 
 size_t print_listint(const listint_t *h)
 {
-	size_t count = 0;
+	size_t mai;
 
-	while (h != NULL)
+	for (mai = 0; h != NULL; mai++)
 	{
 		printf("%d\n", h->max);
-		count++;
 		h = h->next;
 	}
-
-	return count;
+	return (mai);
 }
